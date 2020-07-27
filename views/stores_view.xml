@@ -1,0 +1,40 @@
+<odoo>
+
+    <menuitem id="menu_stores_app" name="Store"/>
+
+    <record model="ir.actions.act_window" id="action_list_stores">
+        <field name="name">Store</field>
+        <field name="res_model">test13.store</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_stores" parent="menu_stores_app" name="Stores" sequence="10"
+              action="action_list_stores"/>
+
+
+    <record model="ir.ui.view" id="view_stores_tree">
+        <field name="name">view.store</field>
+        <field name="model">test13.store</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_stores_form">
+        <field name="name">view.stores</field>
+        <field name="model">test13.store</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
