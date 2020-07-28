@@ -15,6 +15,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <!--# se foloseste un alt camp sequance de tip integer pentru handle# -->
                 <field name="deposit" widget="statinfo"/>
                 <field name="price" avg="1"/>
                 <field name="rate"/>
@@ -43,7 +44,7 @@
                         <field name="category"/>
                         <field name="description_movie"/>
                         <field name="launch_date"/>
-                        <field name="actor_ids"/>
+                        <field name="actor_ids" widget="many2many_tags"/>
                         <field name="currency_id" invisible="1"/>
                         <field name="rate" widget="percentpie"/>
                         <field name="deposit"/>

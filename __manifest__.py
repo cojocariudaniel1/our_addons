@@ -6,7 +6,6 @@
         'views/movies_view.xml',
         'views/characters_view.xml',
         'views/cast_view.xml',
-        'views/market_view.xml',
         'security/ir.model.access.csv'
     ]
 }

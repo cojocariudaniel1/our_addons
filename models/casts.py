@@ -9,3 +9,4 @@ class cast(models.Model):
     gender = fields.Char('Gender:')
     image_cast = fields.Image("Image:", store=True)
     roleplayed = fields.Char('Role played:')
+
