@@ -5,10 +5,39 @@
     <record model="ir.actions.act_window" id="action_list_stores">
         <field name="name">Store</field>
         <field name="res_model">test13.store</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">kanban,tree,form</field>
     </record>
     <menuitem id="menu_stores" parent="menu_stores_app" name="Stores" sequence="10"
               action="action_list_stores"/>
+
+
+    <record id="student_kanban" model="ir.ui.view">
+        <field name="name">game.view</field>
+        <field name="model">test13.store</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="id"/>
+                <field name="image" widget="image" class="oe_avatar"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div class="o_kanban_image">
+                                <img alt="Avatar"
+                                     t-att-src="kanban_image('test13.store','image',record.id.raw_value)"/>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <t class="o_kanban_record_title">
+                                    <h1 t-esc="record.name.value"/>
+                                </t>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
 
 
     <record model="ir.ui.view" id="view_stores_tree">
@@ -29,12 +58,17 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <center><p style="font-size:50px"><field name="name"/></p></center>
                     <group>
-                        <field name="name"/>
+                        <center><field name="image" widget="image"/></center>
                     </group>
+                    <group>
+                        <field name="games_ids"/>
+                        <field name="movies_ids"/>
+                    </group>
+
                 </sheet>
             </form>
         </field>
     </record>
-
 </odoo>
