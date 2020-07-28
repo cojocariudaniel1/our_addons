@@ -1,0 +1,52 @@
+<odoo>
+
+    <record model="ir.actions.act_window" id="action_list_casts">
+        <field name="name">Casts</field>
+        <field name="res_model">test13.cast</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+    <menuitem id="menu_casts" parent="menu_stores_app" name="Casts" sequence="10"
+              action="action_list_casts"/>
+
+    <record model="ir.ui.view" id="view_casts_tree">
+        <field name="name">view.casts</field>
+        <field name="model">test13.cast</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age" sum="1"/>
+                <field name="gender"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="view_casts1_form">
+        <field name="name">Casts</field>
+        <field name="model">test13.cast</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+
+                        <field name="name"/>
+
+                        <field name="age"/>
+                        <field name="gender"/>
+                        <field name="roleplayed"/>
+
+
+
+                        <field name="image_cast" widget="image" class="oe_avatar"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+
+
+
+</odoo>

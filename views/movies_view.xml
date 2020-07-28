@@ -16,7 +16,7 @@
             <tree>
                 <field name="name"/>
                 <field name="deposit" widget="statinfo"/>
-                <field name="price"/>
+                <field name="price" avg="1"/>
                 <field name="rate"/>
             </tree>
         </field>
@@ -30,17 +30,24 @@
             <form>
                 <sheet>
                     <group>
-                        <field name="name"/>
-                        <field name="category"/>
+                        <group>
+                            <h1><field name="name"/></h1>
+                        </group>
+                         <group><field name="poster" widget="image" class="oe_avatar"/></group>
+                    </group>
+                       <group>
+                               <field name="category"/>
                         <field name="description_movie"/>
                         <field name="launch_date"/>
                         <field name="actor_ids"/>
-                        <field name="poster" widget="image" class="oe_avatar"/>
                         <field name="price" widget="monetary"/>
+                           <headder>
+                               <button name="button_action1" string=" Buy This Movie" type="object"/>
+                           </headder>
                         <field name="currency_id" invisible="1"/>
-                        <field name="rate"/>
+                        <field name="rate" widget="percentpie"/>
                         <field name="deposit"/>
-                    </group>
+                        </group>
                 </sheet>
             </form>
         </field>
