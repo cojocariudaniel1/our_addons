@@ -1,0 +1,292 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* store
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-29 09:44+0000\n"
+"PO-Revision-Date: 2020-07-29 09:44+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_movie__actor_ids
+msgid "Actors:"
+msgstr "Actori"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_character__age
+msgid "Age"
+msgstr "Varsta"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__age
+msgid "Age:"
+msgstr "Varsta"
+
+#. module: store
+#: model_terms:ir.ui.view,arch_db:store.student_kanban
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: store
+#: model_terms:ir.ui.view,arch_db:store.view_movies_form
+msgid "Buy This Movie"
+msgstr "Cumpara acest film"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__name
+msgid "Cast name:"
+msgstr "Numele Actorului"
+
+#. module: store
+#: model:ir.actions.act_window,name:store.action_list_casts
+#: model:ir.model,name:store.model_test13_cast
+#: model:ir.ui.menu,name:store.menu_casts
+msgid "Casts"
+msgstr "Actori:"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_movie__category
+msgid "Category:"
+msgstr "Categorie:"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_character__name
+msgid "Character name"
+msgstr "Numele Caracterului"
+
+#. module: store
+#: model:ir.actions.act_window,name:store.action_list_characters
+#: model:ir.model,name:store.model_test13_character
+#: model:ir.model.fields,field_description:store.field_test13_game__character_ids
+#: model:ir.ui.menu,name:store.menu_characters
+msgid "Characters"
+msgstr "Caractere"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_game__deposit
+msgid "Copies of Games licenses in Deposit"
+msgstr "Copie a licentelor de joc in Depozit"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_movie__deposit
+msgid "Copies of Movie In Deposit"
+msgstr "Copie a filmelor in depozit"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__create_uid
+#: model:ir.model.fields,field_description:store.field_test13_character__create_uid
+#: model:ir.model.fields,field_description:store.field_test13_game__create_uid
+#: model:ir.model.fields,field_description:store.field_test13_movie__create_uid
+#: model:ir.model.fields,field_description:store.field_test13_store__create_uid
+msgid "Created by"
+msgstr "Creat de"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__create_date
+#: model:ir.model.fields,field_description:store.field_test13_character__create_date
+#: model:ir.model.fields,field_description:store.field_test13_game__create_date
+#: model:ir.model.fields,field_description:store.field_test13_movie__create_date
+#: model:ir.model.fields,field_description:store.field_test13_store__create_date
+msgid "Created on"
+msgstr "Creat pe"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_movie__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_character__description
+msgid "Description"
+msgstr "Descriere"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_game__description_movie
+#: model:ir.model.fields,field_description:store.field_test13_movie__description_movie
+msgid "Description:"
+msgstr "Descriere"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__display_name
+#: model:ir.model.fields,field_description:store.field_test13_character__display_name
+#: model:ir.model.fields,field_description:store.field_test13_game__display_name
+#: model:ir.model.fields,field_description:store.field_test13_movie__display_name
+#: model:ir.model.fields,field_description:store.field_test13_store__display_name
+msgid "Display Name"
+msgstr "Nume"
+
+#. module: store
+#: model:ir.actions.act_window,name:store.action_list_games
+#: model:ir.model,name:store.model_test13_game
+msgid "Game"
+msgstr "JOc"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_game__name
+msgid "Game Name"
+msgstr "Numele Jocului"
+
+#. module: store
+#: model:ir.ui.menu,name:store.menu_games
+msgid "Games"
+msgstr "Jocuri"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_store__games_ids
+msgid "Games name:"
+msgstr "Numele JOcurilor"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_character__gender
+msgid "Gender"
+msgstr "Sex:"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__gender
+msgid "Gender:"
+msgstr "Sex"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__id
+#: model:ir.model.fields,field_description:store.field_test13_character__id
+#: model:ir.model.fields,field_description:store.field_test13_game__id
+#: model:ir.model.fields,field_description:store.field_test13_movie__id
+#: model:ir.model.fields,field_description:store.field_test13_store__id
+msgid "ID"
+msgstr "ID"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_character__image_128
+msgid "Image"
+msgstr "IMagine"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__image_cast
+msgid "Image:"
+msgstr "IMagine"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast____last_update
+#: model:ir.model.fields,field_description:store.field_test13_character____last_update
+#: model:ir.model.fields,field_description:store.field_test13_game____last_update
+#: model:ir.model.fields,field_description:store.field_test13_movie____last_update
+#: model:ir.model.fields,field_description:store.field_test13_store____last_update
+msgid "Last Modified on"
+msgstr "Ultima data modificat:"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__write_uid
+#: model:ir.model.fields,field_description:store.field_test13_character__write_uid
+#: model:ir.model.fields,field_description:store.field_test13_game__write_uid
+#: model:ir.model.fields,field_description:store.field_test13_movie__write_uid
+#: model:ir.model.fields,field_description:store.field_test13_store__write_uid
+msgid "Last Updated by"
+msgstr "Ultima data updatat de"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__write_date
+#: model:ir.model.fields,field_description:store.field_test13_character__write_date
+#: model:ir.model.fields,field_description:store.field_test13_game__write_date
+#: model:ir.model.fields,field_description:store.field_test13_movie__write_date
+#: model:ir.model.fields,field_description:store.field_test13_store__write_date
+msgid "Last Updated on"
+msgstr "Ultima data updatat "
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_game__launch_date
+msgid "Launch Date"
+msgstr "Data de lansare"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_movie__launch_date
+msgid "Launch Date:"
+msgstr "Data de lansare"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_movie__name
+msgid "Movie Name:"
+msgstr "Numele filmului"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_store__movies_ids
+msgid "Movie name:"
+msgstr "Numele Filmului"
+
+#. module: store
+#: model:ir.actions.act_window,name:store.action_list_movies
+#: model:ir.model,name:store.model_test13_movie
+#: model:ir.ui.menu,name:store.menu_movies
+msgid "Movies"
+msgstr "Filme"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_store__image
+msgid "Picture"
+msgstr "Poza"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_store__image_name
+msgid "Picture name"
+msgstr "Numele pozei"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_game__poster
+msgid "Poster of the Game:"
+msgstr "Posterul Jocului"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_movie__poster
+msgid "Poster of the Movie:"
+msgstr "Posterul FIlmului"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_game__currency_id
+msgid "Price"
+msgstr "Pret"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_game__price
+#: model:ir.model.fields,field_description:store.field_test13_movie__price
+msgid "Price:"
+msgstr "Pret"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_game__rate
+#: model:ir.model.fields,field_description:store.field_test13_movie__rate
+msgid "Rate:"
+msgstr "Rata"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_character__roleingame
+msgid "Role in gane"
+msgstr "ROl in joc"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_cast__roleplayed
+msgid "Role played:"
+msgstr "Rol jucat"
+
+#. module: store
+#: model:ir.actions.act_window,name:store.action_list_stores
+#: model:ir.model,name:store.model_test13_store
+#: model:ir.ui.menu,name:store.menu_stores_app
+msgid "Store"
+msgstr "Magazin"
+
+#. module: store
+#: model:ir.model.fields,field_description:store.field_test13_store__name
+msgid "Store Name:"
+msgstr "NUmele Magazinului"
+
+#. module: store
+#: model:ir.ui.menu,name:store.menu_stores
+msgid "Stores"
+msgstr "Magazine"
