@@ -1,0 +1,54 @@
+<odoo>
+
+    <menuitem id="menu_tickets_app" name="Roulette"/>
+
+    <record id="action_list_tickets" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">test13_ticket</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_tickets" parent="menu_tickets_app" name="Tickets" sequence="10"
+              action="action_list_tickets"/>
+
+    <record id="unique_sequence_id" model="ir.sequence">
+        <field name="name">Sequence Name Goes Here</field>
+        <field name="code">your.sequence.code</field>
+        <field name="active">TRUE</field>
+        <field name="prefix">OR</field>
+        <field name="padding">5</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+    <record id="view_ticket_tree" model="ir.ui.view" >
+        <field name="name">test_ticket.tree</field>
+        <field name="model">test13_ticket</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="ticket_id" readonly="1"/>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ticketn_tree" model="ir.ui.view" >
+        <field name="name">test13_ticket.tree</field>
+        <field name="model">test13_ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="ticket_id" readonly="1"/>
+                    </group>
+                </sheet>
+
+
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,7 +1,8 @@
 {
     'name': 'roulette',
     'data': [
-        'views/roulettes_view.xml',
+        'views/tickets_view.xml',
+        'views/clients_view.xml',
         'security/ir.model.access.csv'
     ]
 }
