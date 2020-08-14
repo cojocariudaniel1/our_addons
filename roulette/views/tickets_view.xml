@@ -1,0 +1,35 @@
+<odoo>
+
+    <menuitem id="menu_tickets_app" name="Roulette"/>
+
+    <record id="action_list_tickets" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">test13_ticket</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_tickets" parent="menu_tickets_app" name="Tickets" sequence="10"
+              action="action_list_tickets"/>
+
+
+    <record id="view_ticket_tree" model="ir.ui.view" >
+        <field name="name">test_ticket.tree</field>
+        <field name="model">test13_ticket</field>
+        <field name="arch" type="xml">
+            <tree>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_ticketn_tree" model="ir.ui.view" >
+        <field name="name">test13_ticket.tree</field>
+        <field name="model">test13_ticket</field>
+        <field name="arch" type="xml">
+            <form>
+
+            </form>
+        </field>
+    </record>
+
+</odoo>
