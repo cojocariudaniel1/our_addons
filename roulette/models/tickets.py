@@ -24,4 +24,3 @@ class tickets(models.Model):
         result = super(tickets, self).create(vals)
         return result
 
-

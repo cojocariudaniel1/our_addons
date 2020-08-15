@@ -39,7 +39,6 @@
         <field name="arch" type="xml">
             <form>
                 <header>
-
                 </header>
                 <sheet>
                     <field name="active" invisible="1"/>
@@ -70,9 +69,7 @@
                         </page>
                         <page string="Contacts">
                             <group>
-                                <field name="email"/>
-                                <field name="phone"/>
-                                <field name="addres"/>
+                                <button name="method_name" string="open_form" type="object"/>
                             </group>
                         </page>
                     </notebook>
