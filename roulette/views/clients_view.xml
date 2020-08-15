@@ -1,4 +1,5 @@
 <odoo>
+    <menuitem id="menu_clients_app" name="Roulette"/>
 
 
     <record id="action_list_clients" model="ir.actions.act_window">
@@ -7,9 +8,18 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_clients" parent="menu_tickets_app" name="Clients" sequence="10"
+    <menuitem id="menu_clients" parent="menu_clients_app" name="Clients" sequence="10"
               action="action_list_clients"/>
 
+    <record id="sequence_self_service" model="ir.sequence">
+        <field name="name">Self Service</field>
+        <field name="code">self.service</field>
+        <field name="active">TRUE</field>
+        <field name="prefix">ID</field>
+        <field name="padding">6</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
 
     <record id="view_clients_tree" model="ir.ui.view" >
         <field name="name">test_client.tree</field>
@@ -28,16 +38,44 @@
         <field name="model">test13_client</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+
+                </header>
                 <sheet>
+                    <field name="active" invisible="1"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <div class="oe_title oe_left">
+                        <h1>
+                            <field name="name" placeholder="Name"/>
+                        </h1>
+                    </div>
                     <group>
-                        <field name="name"/>
-                        <field name="age"/>
+                        <group>
+                            <field name="ceva" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="age"/>
+                            <field name="addres"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                        </group>
                     </group>
-                    <group>
-                        <field name="phone"/>
-                        <field name="email"/>
-                        <field name="addres"/>
-                    </group>
+                    <notebook>
+                        <page string="Tickets">
+                            <group>
+                                <field name="tickets_ids"/>
+                                <field name="phone"/>
+                            </group>
+
+                        </page>
+                        <page string="Contacts">
+                            <group>
+                                <field name="email"/>
+                                <field name="phone"/>
+                                <field name="addres"/>
+                            </group>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
