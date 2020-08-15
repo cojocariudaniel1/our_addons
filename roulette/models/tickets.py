@@ -1,21 +1,26 @@
 from odoo import fields, models, api
-class ticket(models.Model):
+
+class tickets(models.Model):
     _name = 'test13_ticket'
     _description = 'Tickets'
 
+    name = fields.Char(string='Name', required=True)
+    number_1 = fields.Integer(required=True, default='')
+    number_2 = fields.Integer(required=True, default='')
+    number_3 = fields.Integer(required=True, default='')
+    number_4 = fields.Integer(required=True, default='')
+    number_5 = fields.Integer(required=True, default='')
+    number_6 = fields.Integer(required=True, default='')
+    active = fields.Boolean(default=True)
+    text = fields.Char(default='Buy a ticket:')
+    tickets_id = fields.Char('Ticket ID', store=True, default='New code')
+    price = fields.Integer()
 
-    name = fields.Char('Name')
-    ticket_id = fields.Char('Ticket ID.', default='Ticket ID')
-    client_ids =
-    # on create method
     @api.model
     def create(self, vals):
-        obj = super(ticket, self).create(vals)
-        if obj.ticket_id == 'Ticket ID':
-            number = self.env['ir.sequence'].get('your.sequence.code') or 'Ticket ID'
-            obj.write({'ticket_id': number})
-        return obj
-
-
-
+        if vals.get('tickets_id', 'New code') == 'New code':
+            vals['tickets_id'] = self.env['ir.sequence'].next_by_code(
+                'self.service') or 'New code'
+        result = super(tickets, self).create(vals)
+        return result
 
