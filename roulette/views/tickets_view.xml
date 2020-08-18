@@ -13,7 +13,7 @@
         <field name="priority" eval="16"/>
         <field name="arch" type="xml">
             <tree>
-                <field name="tickets_id"/>
+                <field name="name"/>
             </tree>
         </field>
     </record>
@@ -39,6 +39,7 @@
                 </header>
                 <sheet>
                     <field name="active" invisible="1"/>
+                    <field name="name" invisible="1"/>
                     <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
                     <center>
                         <p style="font-size:50px">
