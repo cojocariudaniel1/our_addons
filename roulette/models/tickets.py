@@ -1,15 +1,25 @@
-from odoo import fields, models, api
+from odoo import fields, models, api, exceptions
 
 import random
+
 
 class tickets(models.Model):
     _name = 'test13_ticket'
     _description = 'Tickets'
+    _inherit = 'test13_client'
 
     active = fields.Boolean(default=True)
     text = fields.Char(default='Buy a ticket:')
     name = fields.Char('Ticket ID', store=True, default='New code')
+
     price = fields.Integer()
+
+    @api.constrains('price')
+    def _check_price(self):
+        if self.price == 0:
+            raise exceptions.ValidationError("Price can't be zero !!")
+        if self.price < 0:
+            raise exceptions.ValidationError("Price can't be negative !!")
 
     date = fields.Date(string='Date', default=lambda self: fields.Date.today())
 
@@ -21,7 +31,6 @@ class tickets(models.Model):
         result = super(tickets, self).create(vals)
         return result
 
-
     number_1 = fields.Integer(required=True, default='')
     number_2 = fields.Integer(required=True, default='')
     number_3 = fields.Integer(required=True, default='')
@@ -29,38 +38,24 @@ class tickets(models.Model):
     number_5 = fields.Integer(required=True, default='')
     number_6 = fields.Integer(required=True, default='')
 
-    result = fields.Integer(string='Result', compute='_result')
+    @api.constrains('number_1', 'number_2', 'number_3', 'number_4', 'number_5', 'number_6')
+    def _check_numbers(self):
+        if (self.number_1 > 49) or \
+                (self.number_2 > 49) or \
+                (self.number_3 > 49) or \
+                (self.number_4 > 49) or \
+                (self.number_5 > 49) or \
+                (self.number_6 > 49):
+            raise exceptions.ValidationError("Numbers must not be above 49 !!")
+        if (self.number_1 < 1) or \
+                (self.number_2 < 1) or \
+                (self.number_3 < 1) or \
+                (self.number_4 < 1) or \
+                (self.number_5 < 1) or \
+                (self.number_6 < 1):
+            raise exceptions.ValidationError("Numbers must not be zero or negative !!")
 
-    def _result(self):
-        for tickets in self:
-            random_list = []
-            for i in range(0, 49):
-                n = random.randint(0, 49)
-                random_list.append(n)
+    result = fields.Integer(string='Result')
 
-            number_list = []
-            number_list.append(tickets.number_1)
-            number_list.append(tickets.number_2)
-            number_list.append(tickets.number_3)
-            number_list.append(tickets.number_4)
-            number_list.append(tickets.number_5)
-            number_list.append(tickets.number_6)
-
-            number_intersection = list(set(random_list) & set(number_list))
-            number_intersection_len = len(number_intersection)
-
-            if number_intersection_len < 1:
-                result = 0
-            else:
-                result = tickets.price * (number_intersection_len * 100)
-
-            tickets.result = result
-
-
-
-
-
-
-
-
-
+    status_unextracted = fields.Char(string='Status', default='Unextracted')
+    status_extracted = fields.Char(default='Extracted')
