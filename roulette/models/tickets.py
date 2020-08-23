@@ -1,4 +1,5 @@
 from odoo import fields, models, api
+
 import random
 
 class tickets(models.Model):
@@ -9,6 +10,8 @@ class tickets(models.Model):
     text = fields.Char(default='Buy a ticket:')
     name = fields.Char('Ticket ID', store=True, default='New code')
     price = fields.Integer()
+
+    date = fields.Date(string='Date', default=lambda self: fields.Date.today())
 
     @api.model
     def create(self, vals):

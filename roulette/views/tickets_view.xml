@@ -7,13 +7,14 @@
     <menuitem id="menu_tickets" parent="menu_clients_app" name="Tickets" sequence="10"
               action="action_tickets"/>
 
-    <record id="view_tickets_tree" model="ir.ui.view" >
+    <record id="view_tickets_tree" model="ir.ui.view">
         <field name="name">Tickets</field>
         <field name="model">test13_ticket</field>
         <field name="priority" eval="16"/>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
+                <field name="date"/>
                 <field name="result"/>
             </tree>
         </field>
@@ -29,7 +30,7 @@
         <field name="number_increment">1</field>
     </record>
 
-    <record id="view_tickets_form" model="ir.ui.view" >
+    <record id="view_tickets_form" model="ir.ui.view">
         <field name="name">TicketsForm</field>
         <field name="model">test13_ticket</field>
         <field name="priority" eval="16"/>
@@ -41,7 +42,8 @@
                 <sheet>
                     <field name="active" invisible="1"/>
                     <field name="name" invisible="1"/>
-                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                    <widget name="web_ribbon" title="Archived" bg_color="bg-danger"
+                            attrs="{'invisible': [('active', '=', True)]}"/>
                     <center>
                         <p style="font-size:50px">
                             <field name="text" readonly="1"/>
@@ -49,7 +51,9 @@
                     </center>
                     <group>
                         <group>
-                            <field name="price" widget='monetary' options="{'currency_field': 'currency_id'}" string="Bet price:"/>
+                            <field name="price" widget='monetary' options="{'currency_field': 'currency_id'}"
+                                   string="Bet price:"/>
+                            <field name="date"/>
                         </group>
                         <group>
                             <field name="number_1"/>
@@ -64,7 +68,6 @@
             </form>
         </field>
     </record>
-
 </odoo>
 
 
