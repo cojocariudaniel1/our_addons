@@ -1,12 +1,12 @@
 {
     'name': 'roulette',
-    "images": ['images/main_screenshot.png'],
+    "images": ['static/icon.png'],
     'data': [
         'views/clients_view.xml',
         'views/tickets_view.xml',
-        'views/results_view.xml',
 
         'wizard/results_view.xml',
+
         'security/ir.model.access.csv'
     ]
 

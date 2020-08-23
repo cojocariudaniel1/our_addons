@@ -7,10 +7,12 @@
 			<field name="arch" type="xml">
 				<form string="Results">
 					<group>
-
+						<field name="tickets_ids"/>
 					</group>
 					<footer>
-
+						<button name="result_wizard" type="object"
+								string="Roulette results" class="oe_highlight"/>
+						<button special="cancel" string="Cancel"/>
 					</footer>
 				</form>
 			</field>
