@@ -1,79 +1,75 @@
 <odoo>
-
     <record model="ir.actions.act_window" id="action_list_characters">
         <field name="name">Characters</field>
         <field name="res_model">test13.character</field>
         <field name="view_mode">kanban,tree,form</field>
     </record>
-    <menuitem id="menu_characters" parent="menu_stores_app" name="Characters" sequence="10"
-              action="action_list_characters"/>
-
+    <menuitem
+        id="menu_characters"
+        parent="menu_stores_app"
+        name="Characters"
+        sequence="10"
+        action="action_list_characters"
+    />
     <record model="ir.ui.view" id="view_characters_tree">
         <field name="name">view.characters</field>
         <field name="model">test13.character</field>
-        <field name="priority" eval="16"/>
+        <field name="priority" eval="16" />
         <field name="arch" type="xml">
             <tree>
-                <field name="name"/>
-                <field name="age" sum="1"/>
-                <field name="gender"/>
+                <field name="name" />
+                <field name="age" sum="1" />
+                <field name="gender" />
             </tree>
         </field>
     </record>
-
     <record model="ir.ui.view" id="view_characters1_form">
         <field name="name">Characters</field>
         <field name="model">test13.character</field>
-        <field name="priority" eval="16"/>
+        <field name="priority" eval="16" />
         <field name="arch" type="xml">
             <form>
                 <sheet>
                     <group>
-
-                        <field name="name"/>
-
-                        <field name="age"/>
-                        <field name="gender"/>
-                        <field name="roleingame"/>
-
-                        <field name="description"/>
-
-
-                        <field name="image_128" widget="image" class="oe_avatar"/>
+                        <field name="name" />
+                        <field name="age" />
+                        <field name="gender" />
+                        <field name="roleingame" />
+                        <field name="description" />
+                        <field name="image_128" widget="image" class="oe_avatar" />
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
-
-
-
     <record id="student_kanban" model="ir.ui.view">
         <field name="name">student.kanban.view</field>
         <field name="model">test13.character</field>
         <field name="arch" type="xml">
             <kanban>
-                <field name="id"/>
-                <field name="name"/>
-                <field name="age"/>
-                <field name="gender"/>
-                <field name="image_128"/>
+                <field name="id" />
+                <field name="name" />
+                <field name="age" />
+                <field name="gender" />
+                <field name="image_128" />
                 <templates>
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="o_kanban_image">
-                                <img alt="Avatar"
-                                     t-att-src="kanban_image('test13.character','image_128',record.id.raw_value)"/>
+                                <img
+                                    alt="Avatar"
+                                    t-att-src="kanban_image('test13.character','image_128',record.id.raw_value)"
+                                />
                             </div>
                             <div class="oe_kanban_details">
                                 <t class="o_kanban_record_title">
-                                    <strong t-esc="record.name.value"/>
+                                    <strong t-esc="record.name.value" />
                                 </t>
                                 <div t-if="record.age.value">
-                                    <t t-esc="record.age.value"/>
+                                    <t t-esc="record.age.value" />
                                 </div>
                                 <div t-if="record.gender.value">
-                                    <t t-esc="record.gender.value"/>
+                                    <t t-esc="record.gender.value" />
                                 </div>
                             </div>
                         </div>
@@ -82,5 +78,4 @@
             </kanban>
         </field>
     </record>
-
 </odoo>
