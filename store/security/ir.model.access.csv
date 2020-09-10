@@ -1,6 +1,0 @@
-id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_test13_store,access_test13_store,model_test13_store,base.group_user,1,1,1,1
-access_test13_game,access_test13_game,model_test13_game,base.group_user,1,1,1,1
-access_test13_movie,access_test13_movie,model_test13_movie,base.group_user,1,1,1,1
-access_test13_character,access_test13_character,model_test13_character,base.group_user,1,1,1,1
-access_test13_cast,access_test13_cast,model_test13_cast,base.group_user,1,1,1,1
