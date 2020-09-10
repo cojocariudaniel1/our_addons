@@ -1,5 +1,5 @@
 {
-    'name': 'roulette',
+    'name': 'roulettee',
     "images": ['static/icon.png'],
     'data': [
         'views/clients_view.xml',
