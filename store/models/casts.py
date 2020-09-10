@@ -1,12 +1,12 @@
-from odoo import fields, models, api
+from odoo import api, fields, models
+
 
 class cast(models.Model):
-    _name = 'test13.cast'
-    _description = 'Casts'
+    _name = "test13.cast"
+    _description = "Casts"
 
-    name = fields.Char('Cast name:')
-    age = fields.Integer('Age:')
-    gender = fields.Char('Gender:')
+    name = fields.Char("Cast name:")
+    age = fields.Integer("Age:")
+    gender = fields.Char("Gender:")
     image_cast = fields.Image("Image:", store=True)
-    roleplayed = fields.Char('Role played:')
-
+    roleplayed = fields.Char("Role played:")
