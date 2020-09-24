@@ -17,6 +17,7 @@
             </field>
         </record>
     </data>
+
     <act_window
         id="tickets_results"
         name="Tickets results"
